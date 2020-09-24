@@ -1,0 +1,164 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome to Solace Global</h1>
+        <p>Helping you stay safe</p>
+      <div>
+      <div id="map">
+      </div>
+
+          <script>
+              //This would never usually be stored here this is only here due to time constraints.Data would be retieved from a database or read from a file.
+              
+              var json = [
+                  {
+                      "alert": {
+                          "alertId": "c6f0a2a0-f8c9-34a1-b92f-170c8844a69b",
+                          "title": "Update: 30 killed during oil tanker explosion in Lakoja",
+                          "description": "Local media reports that at least 30 people were killed when an oil tanker exploded due to a traffic collision in Lakoja. The incident took place on the A233 at around 09:00 this morning.",
+                          "categoryId": "2232e1b1-1c3a-446c-ac02-6772f667f4c3",
+                          "riskId": "849beaeb-d95d-46d7-90dd-5a7c9da29c86",
+                          "startDate": "2020-09-23T10:02:28.9",
+                          "endDate": "2020-09-24T10:02:28.9",
+                          "countryId": "2ae8ed91-a795-4381-b158-3c68f61e19f2",
+                          "createdDate": "2020-09-23T10:07:12.2",
+                          "createdBy": "19d4dc0b-ab0b-4c97-8c6b-299956289423",
+                          "latitude": 7.79441,
+                          "longitude": 6.73248,
+                          "notes": "Avoid the area of the explosion and allow emergency crews to respond to the incident. Traffic disruption due to closed roads can be expected. For further assistance, training, or advice, please contact the Solace Global Risk operations centre on +44 (0) 1202 795 801 or via sgr@solaceglobal.com.",
+                          "customerId": null,
+                          "formattedAddress": "",
+                          "suname": null,
+                          "firstname": null,
+                          "email": null,
+                          "phone": null
+                      },
+                      "category": {
+                          "categoryId": "2232e1b1-1c3a-446c-ac02-6772f667f4c3",
+                          "categoryName": "Caution",
+                          "isDeleted": false,
+                          "iconId": "60aff035-2304-46b6-8269-13c1eeb17d6b",
+                          "customerId": "f120d2a6-d3f4-4a12-8de3-57449089ee9e",
+                          "categoryTypeId": "8c586931-42b4-47a5-8290-33b2f6835d0a",
+                          "flash": false
+                      },
+                      "risk": {
+                          "riskId": "849beaeb-d95d-46d7-90dd-5a7c9da29c86",
+                          "riskName": "High",
+                          "colourId": "b8e0f70c-2814-4b13-b704-97ebf8a28c1d",
+                          "isDeleted": false,
+                          "sortOrder": 3
+                      },
+                      "country": {
+                          "countryId": "2ae8ed91-a795-4381-b158-3c68f61e19f2",
+                          "countryName": "Nigeria",
+                          "latitude": 9.04949,
+                          "longitude": 7.42218,
+                          "riskId": "849beaeb-d95d-46d7-90dd-5a7c9da29c86",
+                          "isDeleted": false,
+                          "isoCode": "NG"
+                      },
+                      "colour": {
+                          "colourId": "b8e0f70c-2814-4b13-b704-97ebf8a28c1d",
+                          "colourName": "Orange",
+                          "colourRed": 255,
+                          "colourGreen": 102,
+                          "colourBlue": 0,
+                          "isDeleted": false,
+                          "customerId": "00000000-0000-0000-0000-000000000000",
+                          "rgbColor": "rgb:255,102,0"
+                      }
+                  },
+                  {
+                      "alert": {
+                          "alertId": "141c639e-df0d-2937-23b6-954770216850",
+                          "title": "COVID-19 restrictions on entry of foreigners relaxed, 28 September",
+                          "description": "The Foreign Ministry and National Immigration Administration have announced that foreign nationals with valid Chinese residence permits for work, personal matters and reunions will be permitted to enter China from 28 September.",
+                          "categoryId": "26050e02-c1d2-4584-a702-ea20d2d9d421",
+                          "riskId": "b256274b-b198-47b4-9ada-f460b1d57edd",
+                          "startDate": "2020-09-23T09:27:42.347",
+                          "endDate": "2020-09-24T09:27:42.347",
+                          "countryId": "9fa3912d-f885-4c7f-b985-dd86981374d6",
+                          "createdDate": "2020-09-23T09:31:02.037",
+                          "createdBy": "19d4dc0b-ab0b-4c97-8c6b-299956289423",
+                          "latitude": 40.0799,
+                          "longitude": 116.603,
+                          "notes": "Solace Global advises travellers to ensure that they are aware of any country-specific travel restrictions that may be in place and have all the relevant documentation available whilst in-country. There is a risk that any country or area may implement new restrictions without notice.  It is advised that you check your relevant government's travel advice and contact your airline or travel provider for more details. Continue to monitor for updates. For further assistance, training, or advice, please contact the Solace Global Risk operations centre on +44 (0) 1202 795 801 or via sgr@solaceglobal.com.",
+                          "customerId": null,
+                          "formattedAddress": "",
+                          "suname": null,
+                          "firstname": null,
+                          "email": null,
+                          "phone": null
+                      },
+                      "category": {
+                          "categoryId": "26050e02-c1d2-4584-a702-ea20d2d9d421",
+                          "categoryName": "Travel Information",
+                          "isDeleted": false,
+                          "iconId": "60aff035-2304-46b6-8269-13c1eeb17d6b",
+                          "customerId": "f120d2a6-d3f4-4a12-8de3-57449089ee9e",
+                          "categoryTypeId": "8c586931-42b4-47a5-8290-33b2f6835d0a",
+                          "flash": false
+                      },
+                      "risk": {
+                          "riskId": "b256274b-b198-47b4-9ada-f460b1d57edd",
+                          "riskName": "Low",
+                          "colourId": "f5c7dc4d-8e76-4375-81e1-5a4264289d72",
+                          "isDeleted": false,
+                          "sortOrder": 1
+                      },
+                      "country": {
+                          "countryId": "9fa3912d-f885-4c7f-b985-dd86981374d6",
+                          "countryName": "China",
+                          "latitude": 39.9075,
+                          "longitude": 116.397,
+                          "riskId": "69e7f70e-2a96-42a1-93e1-b98be37a970b",
+                          "isDeleted": false,
+                          "isoCode": "CN"
+                      },
+                      "colour": {
+                          "colourId": "f5c7dc4d-8e76-4375-81e1-5a4264289d72",
+                          "colourName": "Green",
+                          "colourRed": 51,
+                          "colourGreen": 153,
+                          "colourBlue": 0,
+                          "isDeleted": false,
+                          "customerId": "00000000-0000-0000-0000-000000000000",
+                          "rgbColor": "rgb:51,153,0"
+                      }
+                  }];
+
+              
+
+             
+              var map;
+              function initMap() {
+                  const infowindow = new google.maps.InfoWindow();
+                  map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 2,
+                      center: new google.maps.LatLng(2.8, -187.3),
+                      mapTypeId: 'terrain'
+                  });
+
+                  function placeMarker(loc) {
+                      const marker = new google.maps.Marker({
+                          position: new google.maps.LatLng(loc.alert.latitude, loc.alert.longitude),
+                          map: map
+                      });
+                      google.maps.event.addListener(marker, 'click', function () {
+                          infowindow.close(); // Close previously opened infowindow
+                          infowindow.setContent(`<div id="infowindow"><h3>${loc.alert.title}</h3></br><p>${loc.alert.description}</p></br><p>${loc.alert.riskName}<p></div>`);
+                          infowindow.open(map, marker);
+                      });
+                  }
+
+                  json.forEach(placeMarker);
+              }
+              google.maps.event.addDomListener(window, 'load', initGoogleMap);
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBedzf0tqR0Uh1V0QNjgFcwfwtokMA4Mnk&callback=initMap"
+                    async defer></script>
+        </div> 
+    </div>
